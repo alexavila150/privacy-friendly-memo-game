@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * Created by Hannes on 24.05.2016.
  */
-public class MemoGamePlayerFactory {
+public abstract class MemoGamePlayerFactory {
 
     public static List<MemoGamePlayer> createPlayers(MemoGameMode memoryMode){
         List<MemoGamePlayer> players = new LinkedList<>();

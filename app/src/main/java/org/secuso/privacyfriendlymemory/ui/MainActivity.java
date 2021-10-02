@@ -120,7 +120,7 @@ public class MainActivity extends AppCompatDrawerActivity {
                 Intent intent = new Intent(this, MemoActivity.class);
                 intent.putExtra(Constants.GAME_MODE, memoryMode);
                 intent.putExtra(Constants.GAME_DIFFICULTY, memoryDifficulty);
-                int selectedCardDesign = preferences.getInt(Constants.SELECTED_CARD_DESIGN, 1);
+                int selectedCardDesign = preferences.getInt(Constants.CARD_DESIGN1, 1);
                 CardDesign cardDesign =  CardDesign.get(selectedCardDesign);
                 intent.putExtra(Constants.CARD_DESIGN, cardDesign);
                 startActivity(intent);
@@ -210,10 +210,6 @@ public class MainActivity extends AppCompatDrawerActivity {
             args.putInt(ARG_SECTION_NUMBER, sectionNumber);
             fragment.setArguments(args);
             return fragment;
-        }
-
-        public GameTypeFragment() {
-
         }
 
 

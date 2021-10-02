@@ -233,7 +233,7 @@ public class DeckChoiceActivity extends AppCompatPreferenceActivity {
         }
 
         private void setupSelection() {
-            CardDesign selectedDesign = CardDesign.get(sharedPreferences.getInt(Constants.SELECTED_CARD_DESIGN, 1));
+            CardDesign selectedDesign = CardDesign.get(sharedPreferences.getInt(Constants.CARD_DESIGN1, 1));
             Set<String> selectedCustomImages = sharedPreferences.getStringSet(Constants.CUSTOM_CARDS_URIS, new HashSet<String>());
             if (selectedCustomImages.isEmpty()) {
                 thirdBox.setEnabled(false);
@@ -277,7 +277,7 @@ public class DeckChoiceActivity extends AppCompatPreferenceActivity {
                     cardDesignValue = 3;
                     break;
             }
-            sharedPreferences.edit().putInt(Constants.SELECTED_CARD_DESIGN, cardDesignValue).commit();
+            sharedPreferences.edit().putInt(Constants.CARD_DESIGN1, cardDesignValue).commit();
         }
     }
 }
